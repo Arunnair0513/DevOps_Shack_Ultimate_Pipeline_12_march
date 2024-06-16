@@ -1,5 +1,5 @@
+### 1.create nexus and sonar server on AWS instance
 ```bash 
-create nexus and sonar server on AWS instance
 run docker installation commands form docker offical site
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -16,16 +16,17 @@ echo \
 sudo apt-get update
 ```bash
 
+### 2.commands
 ```bash 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```bash
 
+### 3.create container of sonar and nexus by pulling image from docker hub
 ```bash
-create container of sonar and nexus by pulling image from docker hub
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 where 9000:hostport,9000:conatiner ports that has been opened
 ```bash
-
+### 4.commands
 ```bash
 docker run -d --name nexus -p 8081:8082 sonatype/nexus3
 ``bash
